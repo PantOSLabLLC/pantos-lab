@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --color-bg-deep: #08090a;
+  --color-bg-charcoal: #0d0e10;
+  --color-bg-slate: #121416;
+  --color-accent: #00d4aa;
+  --color-accent-muted: rgba(0, 212, 170, 0.15);
+}
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    @apply antialiased text-white/90 overflow-x-hidden;
+  }
+  button,
+  a,
+  [role="button"] {
+    @apply cursor-pointer;
+  }
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Matte transparent glass - for all cards and blocks */
+.panel {
+  background: rgba(18, 20, 22, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
